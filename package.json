@@ -5,78 +5,85 @@
     "main": "src/index.ts",
     "exports": {
         ".": "./src/index.ts",
-        "./ArrowLeft": "./src/components/ArrowLeft/index.ts",
-        "./BirthdayCake": "./src/components/BirthdayCake/index.ts",
-        "./Camera": "./src/components/Camera/index.ts",
-        "./ChevronDown": "./src/components/ChevronDown/index.ts",
-        "./Close": "./src/components/Close/index.ts",
-        "./Comment": "./src/components/Comment/index.ts",
-        "./Filter": "./src/components/Filter/index.ts",
-        "./Home": "./src/components/Home/index.ts",
-        "./Info": "./src/components/Info/index.ts",
-        "./Mail": "./src/components/Mail/index.ts",
-        "./Menu": "./src/components/Menu/index.ts",
-        "./NewTab": "./src/components/NewTab/index.ts",
-        "./Pencil": "./src/components/Pencil/index.ts",
-        "./People": "./src/components/People/index.ts",
-        "./Person": "./src/components/Person/index.ts",
-        "./Profession": "./src/components/Profession/index.ts",
-        "./Reply": "./src/components/Reply/index.ts",
-        "./World": "./src/components/World/index.ts"
+        "./": "./src/lib/",
+        "./raw": "./src/components/"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Cobelt/muejs.git"
+        "url": "https://github.com/mue-js/icons.git"
     },
-    "dependencies": {
-        "@mue-js/sass": "^1.0.0",
-        "lodash.memoize": "^4.1.2",
-        "uuid": "^8.3.2"
+    "bugs": {
+        "url": "https://github.com/mue-js/icons/issues"
     },
+    "keywords": [
+        "muejs",
+        "mue-js",
+        "icons",
+        "svg",
+        "react",
+        "typescript"
+    ],
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.yarnpkg.com"
     },
     "peerDependencies": {
         "react": "^17.0.0",
-        "react-dom": "^17.0.0",
-        "react-hook-form": "^7.0.3"
+        "react-dom": "^17.0.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.14.8",
         "@babel/core": "^7.15.0",
+        "@babel/eslint-parser": "^7.15.0",
         "@babel/plugin-proposal-class-properties": "^7.14.5",
         "@babel/plugin-proposal-export-default-from": "^7.14.5",
         "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
         "@babel/preset-env": "^7.15.0",
         "@babel/preset-react": "^7.14.5",
+        "@babel/preset-typescript": "^7.15.0",
         "@babel/register": "^7.15.3",
         "@babel/runtime": "^7.15.3",
+        "@types/copy-webpack-plugin": "^8.0.1",
+        "@types/lodash.memoize": "^4.1.6",
+        "@types/mini-css-extract-plugin": "^2.2.0",
         "@types/react": "^17.0.17",
+        "@types/react-dom": "^17.0.9",
+        "@typescript-eslint/eslint-plugin": "^4.29.1",
+        "@typescript-eslint/parser": "^4.29.1",
         "babel-loader": "^8.2.2",
         "clean-webpack-plugin": "^4.0.0-alpha.0",
         "copy-webpack-plugin": "^9.0.1",
         "css-loader": "^6.2.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.4.0",
         "html-loader": "^2.1.2",
         "html-webpack-plugin": "^5.3.2",
         "mini-css-extract-plugin": "^2.2.0",
+        "prettier": "^2.3.2",
+        "prettier-stylelint": "^0.4.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "react-hook-form": "^7.12.2",
         "sass": "^1.37.5",
         "sass-loader": "^12.1.0",
         "style-loader": "^3.2.1",
+        "stylelint": "^13.13.1",
+        "stylelint-config-standard": "^22.0.0",
+        "stylelint-scss": "^3.20.1",
+        "typescript": "^4.3.5",
         "webpack": "^5.50.0",
-        "webpack-cli": "^4.7.2",
-        "webpack-dev-server": "^3.11.2"
+        "webpack-cli": "^4.7.2"
     },
     "engines": {
         "node": ">=8",
-        "npm": ">=5"
+        "npm": ">=7"
     },
     "scripts": {
-        "build": "webpack --config webpack.babel.js",
-        "watch": "webpack --watch --config webpack.babel.js",
-        "transpile": "babel src -d dist --copy-files"
+        "build": "webpack --config webpack.babel.ts",
+        "watch": "webpack --watch --config webpack.babel.ts",
+        "transpile": "babel src -d lib --copy-files",
+        "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' ",
+        "lint": "eslint --fix --ext .ts,.tsx ."
     }
 }
