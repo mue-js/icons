@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { IconProps } from '../../types'
 
-const OpenNewTab: FC<IconProps> = ({ className, color, size = 16 }) => {
+const NewTab: FC<IconProps> = ({ className, color, size = 16 }) => {
     return (
         <svg
             className={[color && `text-${color}`, className].filter(Boolean).join(' ')}
@@ -22,4 +22,4 @@ const OpenNewTab: FC<IconProps> = ({ className, color, size = 16 }) => {
     )
 }
 
-export default OpenNewTab
+export default NewTab
