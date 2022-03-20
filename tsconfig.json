@@ -3,6 +3,8 @@
         "target": "es5",
         "lib": ["ES6", "DOM", "DOM.ITERABLE", "ES2016", "ES2017"],
         "jsx": "react",
+        "outDir": "lib",
+        "allowJs": true,
         "declaration": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
@@ -12,17 +14,15 @@
         "strictNullChecks": true,
         "suppressImplicitAnyIndexErrors": true,
         "allowSyntheticDefaultImports": true,
-        "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
         "forceConsistentCasingInFileNames": true,
-        "noEmit": true,
         "esModuleInterop": true,
         "moduleResolution": "node",
         "resolveJsonModule": true,
         "isolatedModules": true,
         "typeRoots": ["node_modules/@types", "src/types/modules"]
     },
-    "include": ["src/types/modules/css.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["src/types/modules/css.d.ts", "src/**/*.ts", "src/**/*.tsx"],
     "exclude": ["node_modules", "lib"]
 }

@@ -1,5 +1,6 @@
 {
     "extends": ["plugin:@typescript-eslint/recommended", "prettier", "plugin:jsx-a11y/recommended"],
+    "plugins": ["prettier"],
     "parser": "@typescript-eslint/parser",
     "env": {
         "es6": true
@@ -16,10 +17,13 @@
         "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
 
-        "prettier/prettier": "off",
+        "prettier/prettier": "warn",
 
         "react/jsx-filename-extension": "off",
         "react/jsx-one-expression-per-line": "off",
-        "react-hooks/exhaustive-deps": "off"
+        "react-hooks/exhaustive-deps": "off",
+
+        "react/react-in-jsx-scope": 0,
+        "react/prop-types": ["off"]
     }
 }
