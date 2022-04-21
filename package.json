@@ -1,12 +1,10 @@
 {
     "name": "@mue-js/icons",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A not professional React package. It'll help you to easily make grids and recurrent components, for sure.",
-    "main": "src/index.ts",
+    "main": "lib/index.js",
     "exports": {
-        ".": "./src/index.ts",
-        "./": "./src/lib/",
-        "./raw": "./src/components/"
+        ".": "./lib/components/"
     },
     "repository": {
         "type": "git",
