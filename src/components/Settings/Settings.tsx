@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { IconProps } from '../../types'
 
 const Settings: FC<IconProps> = ({ className, color = 'black', size = 16 }) => (
